@@ -1,5 +1,5 @@
 const makeBooks = (array) => {
-  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success" id="add-book">Add Book</button>';
+  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-book">Add A Book</button>';
 
   document.querySelector('#store').innerHTML = '';
 

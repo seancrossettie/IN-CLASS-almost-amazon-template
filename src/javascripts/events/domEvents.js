@@ -3,7 +3,9 @@ const domEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
   // CLICK EVENT FOR DELETING A BOOK
     if (e.target.id.includes('delete-book')) {
-      console.warn('CLICKED DELETE BOOK', e.target.id);
+      if (window.confirm('Want to delete?')) {
+        console.warn('CLICKED DELETE BOOK', e.target.id);
+      }
     }
   });
 
