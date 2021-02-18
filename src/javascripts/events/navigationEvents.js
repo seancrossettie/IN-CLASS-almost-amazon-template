@@ -1,13 +1,10 @@
-import signOut from '../helpers/signOut';
+import signOut from '../helpers/auth/signOut';
 
 // navigation events
 const navigationEvents = () => {
   // LOGOUT BUTTON
-  document.querySelector('#logout-button').addEventListener('click', () => {
-    signOut();
-    document.querySelector('#navigation').innerHTML = '';
-    document.querySelector('#store').innerHTML = '';
-  });
+  document.querySelector('#logout-button')
+    .addEventListener('click', signOut);
 
   // BOOKS ON SALE
   document.querySelector('#sale-books').addEventListener('click', () => {

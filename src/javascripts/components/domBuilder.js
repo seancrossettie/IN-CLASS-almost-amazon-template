@@ -3,7 +3,6 @@ const domBuilder = () => {
   <div id="book-container">
     <div id="add-button"></div>
     <div id="store"></div>
-    <div id="cart-modal"></div>
   </div>`;
 };
 

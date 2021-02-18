@@ -1,12 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import loginButton from '../components/buttons/loginButton';
-import logoutButton from '../components/buttons/logoutButton';
-import domBuilder from '../components/domBuilder';
-import navBar from '../components/navBar';
-import domEvents from '../events/domEvents';
-import navigationEvents from '../events/navigationEvents';
-import firebaseConfig from './apiKeys';
+import startApp from '../views/startApp';
+import firebaseConfig from './auth/apiKeys';
 
 const checkLoginStatus = () => {
   // This line initializes your firebase app using the values from your .env file
@@ -20,11 +16,7 @@ const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // person is logged in do something...
-      domBuilder(); // BUILD THE DOM
-      domEvents(); // ADD THE EVENT LISTENTERS TO THE DOM
-      navBar(); // DYNAMICALLY ADD THE NAV
-      logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
-      navigationEvents(); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
+      startApp();
     } else {
       // person is NOT logged in do something...
       loginButton(); // CLEAR THE DOM AND SHOW THE LOGIN BUTTON
