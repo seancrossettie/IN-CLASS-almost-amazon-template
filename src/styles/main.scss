@@ -3,7 +3,6 @@
 
 body {
   background-color: black;
-  text-align: center;
 }
 
 .navbar-dark .navbar-brand {
@@ -38,18 +37,22 @@ body {
 
 #book-container {
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
+  margin-top: 100px;
+  align-content: center;
+
+  #add-button {
+    margin: 0 auto;
+  }
 
   #store {
     width: 90%;
+    display: flex;
+    flex-flow: row wrap;
     text-align: center;
     margin: auto;
-    margin-top: 100px;
-
-    &.flex {
-      display: flex;
-      flex-flow: row wrap;
-    }
+    justify-content: center;
 
     .card {
       width: 300px;

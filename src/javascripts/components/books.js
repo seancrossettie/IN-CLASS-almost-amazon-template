@@ -1,6 +1,7 @@
 const makeBooks = (array) => {
+  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success" id="add-book">Add Book</button>';
+
   document.querySelector('#store').innerHTML = '';
-  document.querySelector('#store').classList.add('flex');
 
   array.forEach((item) => {
     document.querySelector('#store').innerHTML += `<div class="card">
