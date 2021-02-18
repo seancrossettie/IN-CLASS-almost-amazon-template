@@ -24,12 +24,12 @@ const navigationEvents = () => {
     const searchValue = document.querySelector('#search').value.toLowerCase();
     console.warn(searchValue);
 
-    // MAKE A CALL TO THE API TO FILTER ON THE BOOKS
-    // IF THE SEARCH DOESN'T RETURN ANYTHING, SHOW THE EMPTY STORE
-    // OTHERWISE SHOW THE STORE
-
-    // WHEN THE USER PRESSES ENTER, CLEAR THE INPUT
+    // WHEN THE USER PRESSES ENTER, MAKE THE API CALL AND CLEAR THE INPUT
     if (e.keyCode === 13) {
+      // MAKE A CALL TO THE API TO FILTER ON THE BOOKS
+      // IF THE SEARCH DOESN'T RETURN ANYTHING, SHOW THE EMPTY STORE
+      // OTHERWISE SHOW THE STORE
+
       document.querySelector('#search').value = '';
     }
   });

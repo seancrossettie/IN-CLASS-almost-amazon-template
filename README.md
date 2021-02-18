@@ -10,10 +10,20 @@ We will be learning about the following:
 - ERDs
 - Postman
 - CRUD
+
 ## Get Started
 - Clone repo
 - `npm i`
 - `npm start`
+## TODO 
+In preparation for next week, complete the following in lab:
+- [Firebase Walkthrough Videos ~15 minutes](https://vimeo.com/showcase/codetracker-firebase) | PW: `firebaseRocks!`
+  - Create a project called `Almost Amazon`
+  - Add a Realtime Database
+  - Create an app called `Almost Amazon`
+  - Add Auth
+  - Add the Keys to your `.env` file
+- Install [Postman](https://www.postman.com/downloads/)
 
 ## Technologies used
 - Javascript

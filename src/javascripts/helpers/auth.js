@@ -4,6 +4,7 @@ import loginButton from '../components/buttons/loginButton';
 import logoutButton from '../components/buttons/logoutButton';
 import domBuilder from '../components/domBuilder';
 import navBar from '../components/navBar';
+import domEvents from '../events/domEvents';
 import navigationEvents from '../events/navigationEvents';
 import firebaseConfig from './apiKeys';
 
@@ -19,14 +20,14 @@ const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // person is logged in do something...
-      $('#login-form-container').html('');
-      domBuilder();
-      navBar();
-      logoutButton();
-      navigationEvents();
+      domBuilder(); // BUILD THE DOM
+      domEvents(); // ADD THE EVENT LISTENTERS TO THE DOM
+      navBar(); // DYNAMICALLY ADD THE NAV
+      logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
+      navigationEvents(); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
     } else {
       // person is NOT logged in do something...
-      loginButton();
+      loginButton(); // CLEAR THE DOM AND SHOW THE LOGIN BUTTON
     }
   });
 };
