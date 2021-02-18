@@ -2,7 +2,7 @@
 
 const makeAuthors = (array) => {
   document.querySelector('#store').innerHTML = '';
-  document.querySelector('#store').classList.add('flex');
+  // CREATE A BUTTON TO ADD BOOKS
 
   array.forEach((item) => {
     // FIXME: STUDENTS create cards for your authors
