@@ -8,9 +8,9 @@ assignees: ''
 ---
 
 ### Feature Summary
-As a user...
-I want to... 
-So I can... 
+As a user... <!---  the person using the feature --->
+I want to... <!--- what the user needs the feature for --->
+So I can... <!--- why the user needs it --->
 
 
 ### Acceptance Criteria 
