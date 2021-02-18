@@ -23,7 +23,7 @@ In preparation for next week, complete the following in lab:
   - Create an app called `Almost Amazon`
   - Add Auth
   - Add the Keys to your `.env` file
-  - Updload the sample data to Firebase
+  - Upload the sample data to Firebase
 - Install [Postman](https://www.postman.com/downloads/)
 
 ## Technologies used
