@@ -2,6 +2,9 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import loginButton from '../components/buttons/loginButton';
 import logoutButton from '../components/buttons/logoutButton';
+import domBuilder from '../components/domBuilder';
+import navBar from '../components/navBar';
+import navigationEvents from '../events/navigationEvents';
 import firebaseConfig from './apiKeys';
 
 const checkLoginStatus = () => {
@@ -16,7 +19,11 @@ const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // person is logged in do something...
+      $('#login-form-container').html('');
+      domBuilder();
+      navBar();
       logoutButton();
+      navigationEvents();
     } else {
       // person is NOT logged in do something...
       loginButton();
