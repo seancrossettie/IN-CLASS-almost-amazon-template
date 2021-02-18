@@ -10,6 +10,7 @@ const makeBooks = (array) => {
         <h5 class="card-title">${item.title}</h5>
         <p class="card-text bold">${item.sale ? `<span class="badge badge-info sale-badge"><i class="fa fa-bell" aria-hidden="true"></i> Sale</span> $${item.price}` : `$${item.price}`}</p>
         <hr>
+        <button class="btn btn-info" id="edit-book--${item.firebaseKey}">Edit Book</button>
         <button class="btn btn-danger" id="delete-book--${item.firebaseKey}">Delete Book</button>
         </div>
       </div>`;
