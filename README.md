@@ -1,6 +1,8 @@
 # Almost Amazon
 We are building an admin app that allows a store owner to login to the app and manage books and authors.
 
+![Screen Shot](./almostam.png)
+
 We will be learning about the following:
 - XHR requests
 - Promises
