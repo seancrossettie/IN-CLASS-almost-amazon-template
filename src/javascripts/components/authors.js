@@ -1,6 +1,6 @@
 // FIXME: STUDENTS show your authors
 
-const makeAuthors = (array) => {
+const showAuthors = (array) => {
   document.querySelector('#store').innerHTML = '';
   // CREATE A BUTTON TO ADD BOOKS
 
@@ -14,4 +14,4 @@ const emptyAuthors = () => {
   document.querySelector('#store').innerHTML = '<h1>No Authors</h1>';
 };
 
-export { makeAuthors, emptyAuthors };
+export { showAuthors, emptyAuthors };

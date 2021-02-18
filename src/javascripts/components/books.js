@@ -1,4 +1,4 @@
-const makeBooks = (array) => {
+const showBooks = (array) => {
   document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-book">Add A Book</button>';
 
   document.querySelector('#store').innerHTML = '';
@@ -21,4 +21,4 @@ const emptyBooks = () => {
   document.querySelector('#store').innerHTML = '<h1>No Items</h1>';
 };
 
-export { makeBooks, emptyBooks };
+export { showBooks, emptyBooks };
