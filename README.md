@@ -55,7 +55,11 @@ In preparation for next week, complete the following in lab:
   <img src="documentation/Logout Button.png" alt="Logout Button Screen" width="300px"/>    
   
   - This should bring back the Login Button
+  - Take a look at the layout of the application. Start in `main.js` and follow the flow to get up to speed.
+    - Look at the components, events, helpers, and views
 - Install [Postman](https://www.postman.com/downloads/)
+
+
 
 ## Technologies used
 - Javascript

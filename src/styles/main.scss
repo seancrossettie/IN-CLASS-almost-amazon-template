@@ -68,6 +68,10 @@ body {
     .card {
       width: 300px;
       margin: 5px;
+
+      .sale-badge {
+        font-size: 1em;
+      }
     }
 
     .table {
@@ -76,32 +80,4 @@ body {
       margin: 0 auto;
     }
   }
-}
-
-.login-form {
-  width: 30%;
-  margin: 0 auto;
-  color: white;
-  text-align: left;
-  margin-top: 300px;
-
-  @media only screen and (max-width: 600px) {
-    margin-top: 200px;
-    width: 90%;
-  }
-
-  .title {
-    font-family: "Oregano", cursive !important;
-    color: red;
-    font-weight: 900;
-    font-size: 3em;
-    text-align: center;
-
-    @media only screen and (max-width: 600px) {
-      font-size: 2em;
-    }
-  }
-}
-.sale-badge {
-  font-size: 1em;
 }
