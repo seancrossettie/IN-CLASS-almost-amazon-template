@@ -56,12 +56,12 @@ In preparation for next week, complete the following in lab:
   
   - This should bring back the Login Button
 
-### TODO 2 - Look at the Code...
+## TODO 2 - Look at the Code...
   - Take a look at the layout of the application. Start in `main.js` and follow the flow to get up to speed.
     - Look at the components, events, helpers, and views
     - Checkout `main.scss` 
 
-### TODO 3 - 
+## TODO 3 - Installs
 - Install [Postman](https://www.postman.com/downloads/)
 
 
