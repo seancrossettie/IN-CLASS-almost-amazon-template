@@ -1,6 +1,8 @@
 import selectAuthor from './selectAuthor';
 
 const addBookForm = () => {
+  document.querySelector('#store').innerHTML = '';
+  document.querySelector('#add-button').innerHTML = '';
   document.querySelector('#form-container').innerHTML = `
     <form id="submit-book-form" class="mb-4">
       <div class="form-group">
