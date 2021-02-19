@@ -20,8 +20,13 @@ const domEvents = () => {
       console.warn('CLICKED SUBMIT BOOK', e.target.id);
     }
 
+    // CLICK EVENT FOR SHOWING MODAL FORM FOR ADDING A BOOK
+    if (e.target.id.includes('edit-book-btn')) {
+      console.warn('CLICKED EDIT BOOK', e.target.id);
+    }
+
     // CLICK EVENT FOR EDITING A BOOK
-    if (e.target.id.includes('edit-book')) {
+    if (e.target.id.includes('update-book')) {
       console.warn('CLICKED EDIT BOOK', e.target.id);
     }
 
