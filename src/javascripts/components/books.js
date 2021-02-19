@@ -2,6 +2,7 @@ const showBooks = (array) => {
   document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-book">Add A Book</button>';
 
   document.querySelector('#store').innerHTML = '';
+  document.querySelector('#form-container').innerHTML = '';
 
   array.forEach((item) => {
     document.querySelector('#store').innerHTML += `<div class="card">
