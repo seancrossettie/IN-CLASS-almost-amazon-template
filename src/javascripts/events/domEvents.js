@@ -52,7 +52,7 @@ const domEvents = () => {
       const authorObject = {
         first_name: document.querySelector('#first-name').value,
         last_name: document.querySelector('#last-name').value,
-        emai: document.querySelector('#email').value,
+        email: document.querySelector('#email').value,
       };
       createAuthor(authorObject).then((authorArray) => showAuthors(authorArray));
     }
