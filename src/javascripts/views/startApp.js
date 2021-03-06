@@ -6,13 +6,13 @@ import navigationEvents from '../events/navigationEvents';
 import { getBooks } from '../helpers/data/bookData';
 import { showBooks } from '../components/books';
 
-const startApp = () => {
+const startApp = (user) => {
   domBuilder(); // BUILD THE DOM
   domEvents(); // ADD THE EVENT LISTENTERS TO THE DOM
   navBar(); // DYNAMICALLY ADD THE NAV
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
-  navigationEvents(); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
-  getBooks().then((books) => showBooks(books));
+  navigationEvents(user.uid); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
+  getBooks(user.uid).then((books) => showBooks(books));
 };
 
 export default startApp;

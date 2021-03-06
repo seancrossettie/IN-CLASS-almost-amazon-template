@@ -6,8 +6,8 @@ import firebaseConfig from '../auth/apiKeys';
 const dbUrl = firebaseConfig.databaseURL;
 
 // GET AUTHORS
-const getAuthors = () => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/authors.json`)
+const getAuthors = (uid) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/authors.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
       if (response.data) {
         const authorArray = Object.values(response.data);
@@ -17,7 +17,22 @@ const getAuthors = () => new Promise((resolve, reject) => {
       }
     }).catch((error) => reject(error));
 });
+
+// GET SINGLE AUTHOR
+
+const getSingleAuthor = (authorId) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/authors/${authorId}.json`)
+    .then((response) => resolve(response.data))
+    .catch((error) => reject(error));
+});
+
 // DELETE AUTHOR
+const deleteAuthor = (firebaseKey, uid) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/authors/${firebaseKey}.json`)
+    .then(() => getAuthors(uid).then((authorArray) => resolve(authorArray)))
+    .catch((error) => reject(error));
+});
+
 // CREATE AUTHOR
 const createAuthor = (authorObject) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/authors.json`, authorObject)
@@ -32,4 +47,6 @@ const createAuthor = (authorObject) => new Promise((resolve, reject) => {
 // UPDATE AUTHOR
 // SEARCH AUTHORS
 
-export { getAuthors, createAuthor };
+export {
+  getAuthors, createAuthor, deleteAuthor, getSingleAuthor
+};

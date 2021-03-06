@@ -1,3 +1,5 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import signOut from '../helpers/auth/signOut';
 import { getAuthors } from '../helpers/data/authorData';
 import { showAuthors } from '../components/authors';
@@ -5,7 +7,7 @@ import { getBooks, getSellBooks } from '../helpers/data/bookData';
 import { showBooks } from '../components/books';
 
 // navigation events
-const navigationEvents = () => {
+const navigationEvents = (uid) => {
   // LOGOUT BUTTON
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
@@ -18,7 +20,7 @@ const navigationEvents = () => {
 
   // ALL BOOKS
   document.querySelector('#all-books').addEventListener('click', () => {
-    getBooks().then((booksArray) => showBooks(booksArray));
+    getBooks(firebase.auth().currentUser.uid).then((booksArray) => showBooks(booksArray));
   });
 
   // SEARCH
@@ -39,7 +41,7 @@ const navigationEvents = () => {
   // FIXME: STUDENTS Create an event listener for the Authors
   // 1. When a user clicks the authors link, make a call to firebase to get all authors
   document.querySelector('#authors').addEventListener('click', () => {
-    getAuthors().then((authors) => showAuthors(authors));
+    getAuthors(uid).then((authors) => showAuthors(authors));
   });
   // 2. Convert the response to an array because that is what the makeAuthors function is expecting
   // 3. If the array is empty because there are no authors, make sure to use the emptyAuthor function
