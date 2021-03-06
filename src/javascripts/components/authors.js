@@ -9,13 +9,15 @@ const showAuthors = (array) => {
 
   array.forEach((item) => {
     // FIXME: STUDENTS create cards for your authors
-    document.querySelector('#store').innerHTML += `<div class="card">  <div class="card-body" style="width: 18rem;">
+    document.querySelector('#store').innerHTML += `<div class="card"> 
+                                                    <div class="card-body" style="width: 18rem;">
                                                     <div class="card-body">
                                                      <ul class="list-group list-group-flush">
                                                       <li class="list-group-item">${item.first_name} ${item.last_name}</li>
                                                       <li class="list-group-item fs-6">${item.email}</li>
                                                      </ul>
-                                                     <button type="button" class="btn btn-danger id="delete-button--${item.firebaseKey}">Danger</button>
+                                                     <button class="btn btn-primary" id="author-name-title--${item.firebaseKey}">Show Books</button>
+                                                     <button class="btn btn-danger" id="delete-author--${item.firebaseKey}">Delete Author</button>
                                                     </div>
                                                   </div>`;
   });
